@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {{ encore_entry_link_tags('app') }} 
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-3 img-fluid">
+                    <img src="{{ asset('img/symfony-logo.svg') }}" alt="Symfony logo">
+                </div>
+                <div class="col">
+                    <h1>Symfony project matrice</h1>
+                    <p>
+                            Base project for new Symfony project.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2>What is doing for ?</h2>
+            <p>
+                This project is a base for create new project based on symfony 4.
+            </p>
+            <p>
+                In this project is already include annotation, twig, Bootstrap and JQuery with webpack encore
+            </p>
+            <p class="text-success">
+                enjoy it ! ;)
+            </p>
+            <p class="text-danger">
+                Please remove "src/Controllers/ExempleController.php" and "templates/welcome.html.twig" before use !
+            </p>
+        </div>
+
+        {{ encore_entry_script_tags('app') }}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
